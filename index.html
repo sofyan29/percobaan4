@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dot.tulsign</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- BY SYAIFATUL NUR IMAN -->
+
+<body>
+
+    <header>
+        <!-- NAVIGATION -->
+        <section class="container-nav-section">
+            
+            <nav class="container-nav">
+                <h2 class="logo-nav">DOT.<span>Tulsign</span></h2>
+                <ul class="container-ul">
+                    <li class="container-li">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="container-li">
+                        <a href="profil.html">Contact</a>
+                    </li>
+                    <li class="container-li">
+                        <a href="#picture">Picture</a>
+                        <ul class="submenu">
+                            <li><a href="#landscape">Landscape</a></li>
+                            <li><a href="#portrait">Portrait</a></li>
+                            <li><a href="#nature">Nature</a></li>
+                        </ul>
+                    </li>
+                    <li class="container-li">
+                        <a href="#photo">Photo</a>
+                        <ul class="submenu">
+                            <li><a href="#personal">Personal</a></li>
+                            <li><a href="#travel">Personality</a></li>
+                            <li><a href="#events">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="container-li">
+                        <a href="index2.html">Service</a>
+                        <ul class="submenu">
+                            <li><a href="index2.html">Website</a></li>
+                            <li><a href="#travel">Design</a></li>
+                            <li><a href="#events">Photo </a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <!-- NAVIGATION -->
+
+        <!-- JUMBOTRON -->
+        <div class="jumbotron">
+            <h3 class="h3-jumbotron">I'm from Indonesia</h3>
+            <h1 class="h2-jumbotron">WELCOME</h1>
+            <h1 class="h1-jumbotron">DOT.TULSIGN</h1>
+            <h3 class="h3-jumbotron">Creator by Syaifatul Nur Iman</h3>
+        </div>
+        <script>
+            const h1Jumbotron = document.querySelector('.h1-jumbotron');
+
+            h1Jumbotron.addEventListener('click', function () {
+                this.classList.toggle('clicked');
+            });
+        </script>
+        <!-- JUMBOTRON -->
+
+        <!-- ANIMASI TEXT TYPING -->
+        <section class="typing-section">
+            <div>
+                <div class="h1-typing">
+                    <h1>Hi,</h1>
+                </div>
+            </div>
+            <h1 class="typing-text">saya seorang<span class="role"></span></h1>
+            <div>
+                <div>
+                    <img class="div-img" src="image/Profil 2.png">
+                </div>
+            </div>
+        </section>
+        <script>
+            const roles = ['Designer', 'Photography', 'Web Programming', 'Officer'];
+            let currentRoleIndex = 0;
+            const roleElement = document.querySelector('.role');
+
+            function animateRoleText() {
+                roleElement.textContent = '';
+
+                let currentRole = roles[currentRoleIndex];
+                let text = '';
+                let i = 0;
+
+                function type() {
+                    if (i < currentRole.length) {
+                        text += currentRole.charAt(i);
+                        roleElement.textContent = text;
+                        i++;
+                        setTimeout(type, 100);
+                    } else {
+                        setTimeout(erase, 2000);
+                    }
+                }
+
+                function erase() {
+                    if (i >= 0) {
+                        text = text.slice(0, -1);
+                        roleElement.textContent = text;
+                        i--;
+                        setTimeout(erase, 50);
+                    } else {
+                        currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                        setTimeout(animateRoleText, 1000);
+                    }
+                }
+
+                type();
+            }
+
+            animateRoleText();
+        </script>
+        <!-- ANIMASI TEXT TYPING -->
+
+        <!-- ANIMASI LOGO -->
+        <section>
+            <h1 class="text-animasi-logo">Programming and Markup languages</h1>
+        </section>
+        <section class="logo-section">
+            <div class="logo-container">
+                <img src="Image2/pngegg (21).png" alt="Logo 1" class="logo">
+            </div>
+            <div class="logo-container">
+                <img src="Image2/pngegg (22).png" alt="Logo 2" class="logo">
+            </div>
+            <div class="logo-container">
+                <img src="Image2/pngegg (23).png" alt="Logo 3" class="logo">
+            </div>
+            <div class="logo-container">
+                <img src="Image2/pngegg (24).png" alt="Logo 4" class="logo">
+            </div>
+            <div class="logo-container">
+                <img src="Image2/pngegg (25).png" alt="Logo 5" class="logo">
+            </div>
+        </section>
+        <script>
+            const logos = document.querySelectorAll(".logo");
+
+            function toggleGrayscale() {
+                this.classList.toggle("active");
+            }
+
+            logos.forEach((logo) => {
+                logo.addEventListener("click", toggleGrayscale);
+            });
+        </script>
+        <!-- ANIMASI LOGO -->
+
+        <!-- PAGE KONTEN FRONTEND RESEARCH -->
+        <section class="container-konten">
+            <div class="container-box-konten-title">
+                <h1 class="container-text-title">Frontend Development</h1>
+            </div>
+            <div class="container-box-konten">
+                <div class="container-konten-div">
+                    <h2 class="container-text-box">Research</h2>
+                    <li>Mobile app responsiveness</li>
+                    <li>Information website responsiveness</li>
+                </div>
+                <div class="container-konten-div">
+                    <h2 class="container-text-box">User convenience</h2>
+                    <li>Device size adjustment</li>
+                    <li>loading speed</li>
+                    <li>Ease of access</li>
+                </div>
+                <div class="container-konten-div">
+                    <h2 class="container-text-box">Responsive</h2>
+                    <li>responsive on various devices</li>
+                    <li>Interacting animation</li>
+                </div>
+                <div class="container-konten-div">
+                    <h2 class="container-text-box">Reachable</h2>
+                    <li>Easy to reach by scan</li>
+                </div>
+            </div>
+        </section>
+        <!-- PAGE KONTEN FRONTEND RESEARCH -->
+
+    </header>
+
+    <!-- TEXT BLEND -->
+    <section id="picture" class="color-section">
+        <div class="color color1"></div>
+        <a class="picture-link">
+            <a href="design.html" class="picture-text">Picture</a>
+        </a>
+        <div class="color color2"></div>
+    </section>
+
+    <section class="container-image-galery-text">
+        <div class="image-container">
+            <img class="img-konten-container" src="image/MY GALERY.png" alt="Deskripsi Gambar">
+        </div>
+    </section>
+
+    <section id="photo" class="color-section">
+        <div class="color color3"></div>
+        <a class="picture-link">
+            <a href="photo.html" class="picture-text">Photo</a>
+        </a>
+        <div class="color color4"></div>
+    </section>
+    <script>
+        const pictureLinks = document.querySelectorAll('.picture-link');
+
+        pictureLinks.forEach(pictureLink => {
+            pictureLink.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const currentPicture = this;
+                const currentColorSection = currentPicture.parentNode;
+                const currentColor = currentColorSection.querySelector('.color');
+
+                currentPicture.classList.add('clicked');
+                currentColor.classList.add('color-animation');
+
+                setTimeout(() => {
+                    currentPicture.classList.remove('clicked');
+                    currentColor.classList.remove('color-animation');
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- TEXT BLEND -->
+
+    <!--ANIMASI SELECTION GAMBAR-->
+    <section class="container">
+        <div class="konten">
+            <img class="container-img-hover" src="image/FOTO 1.jpg" width="190" height="280">
+        </div>
+        <div class="konten">
+            <img class="container-img-hover" src="image/FOTO 2.jpg" width="190" height="280">
+        </div>
+        <div class="konten">
+            <img class="container-img-hover" src="image/FOTO 7.jpg" width="190" height="280">
+        </div>
+        <div class="konten">
+            <img class="container-img-hover" src="image/FOTO 4.jpg" width="190" height="280">
+        </div>
+        <div class="konten">
+            <img class="container-img-hover" src="image/FOTO 5.jpg" width="190" height="280">
+        </div>
+        <div class="konten">
+            <img class="container-img-hover" src="image/FOTO 6.jpg" width="190" height="280">
+        </div>
+        <div class="konten">
+            <img class="container-img-hover" src="image/FOTO 8.jpg" width="190" height="280">
+        </div>
+        <div class="konten">
+            <img class="container-img-hover" src="image/FOTO 9.jpg" width="190" height="280">
+        </div>
+    </section>
+    <!--ANIMASI SELECTION GAMBAR-->
+
+    <main>
+
+        <section class="typing-section">
+            <div class="box">
+
+            </div>
+        </section>
+        <style>
+            .typing-section {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            .box {
+                background-color: #FFFFFF;
+                width: 1000px;
+                height: 300px;
+            }
+
+            @media screen and (max-width: 500px) {
+                .box {
+                    width: 80px;
+                    height: 120px;
+                }
+            }
+        </style>
+
+
+        <!-- CONTAINER CONTACT -->
+        <section class="kontak">
+            <h2>Contact Information</h2>
+            <form>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Contact Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <script>
+            const contactForm = document.querySelector('.kontak form');
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault(); // Mencegah pengiriman formulir secara default
+
+                // Ambil nilai input
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+
+                // Buat objek data
+                const data = {
+                    name: name,
+                    email: email,
+                    phone: phone
+                }
+
+                // Kirim data ke server (AJAX)
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '/path/to/server', true);
+                xhr.setRequestHeader('Content-type', 'application/json');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        console.log('Data berhasil dikirim!');
+                        // Lakukan tindakan sesuai kebutuhan, seperti menampilkan pesan sukses
+                    }
+                };
+                xhr.send(JSON.stringify(data));
+
+                // Reset formulir setelah pengiriman
+                contactForm.reset();
+            });
+        </script>
+        <!-- CONTAINER CONTACT -->
+        <section class="container-media">
+            <section class="container-text-media">
+                <div class="text-media">
+                    <h2 class="text-media-sosial">Visit my social media</h2>
+                </div>
+            </section>
+        </section>
+        <section class="sosial-media">
+            <div class="div-sosial-media">
+                <a class="link-sosial-media" href="https://instagram.com/syaifatul_n.i?igshid=ZGUzMzM3NWJiOQ=="
+                    target="_blank">
+                    <img class="logo-media-sosial" src="image/Logo Instagram.png" alt="Instagram Logo">
+                </a>
+                <a href="https://www.pinterest.com/profil-anda" target="_blank">
+                    <img class="logo-media-sosial" src="image/Logo Pinterest.png" alt="Pinterest Logo">
+                </a>
+            </div>
+        </section>
+
+        </section>
+        <!-- MEDSOS -->
+    </main>
+    <!-- FOOTER PENUTUP -->
+    <footer>
+        &copy: 2023 dot.tulsign
+    </footer>
+    <!-- FOOTER PENUTUP -->
+
+</body>
+<!-- BY SYAIFATUL NUR IMAN -->
+
+
+</html>

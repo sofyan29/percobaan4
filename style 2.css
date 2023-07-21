@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    top: 0;
+    overflow: auto;
+}
+
+.jumbotron {
+    background-image: url('image/welcome (4).png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    height: 200px;
+    font-size: 30px;
+    padding: 50px;
+    text-align: center;
+    color: #000000;
+}
+
+h1 {
+    margin-bottom: 150px;
+    -webkit-text-stroke: #ffffff 1px;
+}
+
+p {
+    color: black;
+}
+
+nav {
+    background-color: #001C30;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+nav a:hover {
+    font-weight: bold;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline;
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+.card {
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.content {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.label {
+    border-color: #40c4ff;
+    text-align: center;
+}
+
+.responsive-image {
+    width: 30%;
+    height: auto;
+    position: relative;
+    border-radius: 10%;
+    padding-top: 0px;
+}
+
+.responsive-image:hover {
+    outline: 10px solid #01579b;
+    transition: 2s;
+}
+
+footer {
+    background-color: #01579b;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+main {
+    overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .responsive-image {
+        width: 60%;
+    }    
+}

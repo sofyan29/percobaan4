@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --color-bg: linear-gradient(-25deg, #e9eeff, #ffff);
+    --color-black: #0a0a0c;
+    --color-white: #ffff;
+    --color-primary: #0175c1;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-black);
+    overflow: hidden;
+}
+
+a {
+    color: var(--color-black);
+    font-size: 18px;
+    transition: all .4s ease;
+    font-weight: 300;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+.btn {
+    display: inline-block;
+    padding: .5rem 2.4rem;
+    background: var(--color-primary);
+    border-radius: 2rem;
+    color: var(--color-white);
+    border: 1px solid transparent;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: none;
+    border: 1px solid var(--color-black);
+    color: var(--color-black);
+}
+
+header {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1340px;
+    margin: 0 auto;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    height: 5rem;
+    position: absolute;
+    width: 100%;
+}
+
+.logo h3 {
+    font-size: 1.9rem;
+    font-weight: 300;
+    text-transform: capitalize;
+}
+
+.logo h3 span {
+    color: var(--color-primary);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+nav ul li a i {
+    font-size: 1.2rem;
+}
+
+.container section {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    padding-top: 9rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 7rem;
+    line-height: 1.1;
+    font-weight: 300;
+    color: var(--color-primary);
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 1rem;
+    font-size: 17px;
+}
+
+section .text {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.right {
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.bg {
+    width: 30rem;
+    height: 30rem;
+    background: var(--color-white);
+    border-radius: 50%;
+    z-index: -1;
+    justify-content: center;
+    margin-left: 6rem;
+}
+
+.img {
+    height: 32rem;
+    width: 32rem;
+    right: 5rem;
+    position: absolute;
+    margin-top: 6rem;
+}
+
+.img img {
+    z-index: 0;
+    width: 100%;
+    transition: 1s ease;
+    transform: rotate(45deg);
+}
+
+.img img:hover {
+    transform: rotate(0) scale(1.2);
+}

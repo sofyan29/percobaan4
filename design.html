@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dot.tulsign</title>
+    <link rel="stylesheet" href="style 2.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="jumbotron">
+            </div>
+            <nav>
+                <li><a href="index.html">Back</a></li>
+                <li><a href="photo.html">Photo</a></li>
+            </nav>
+        </header>
+
+        <!-- BOX KONTEN 1 -->
+        <section class="box-konten">
+            <div class="box-image-konten">
+                <div>
+                    <img class="img-konten-box" src="image/tools design.png" alt="">
+                </div>
+            </div>
+            <div class="box-konten-text">
+                <h2 class="box-text">Tools that I use</h2>
+                <ul class="box-paragraf">
+                    <li>Create virtual graphic designs with Adobe Illustrator, posters, and more in terms of industry
+                    </li>
+                    <li>edit photos in Adobe Photoshop and turn them into materials for content</li>
+                    <li>Create lots of posters, banners and other branding for products</li>
+                </ul>
+            </div>
+            <style>
+                .box-konten {
+                    display: flex;
+                }
+
+                .img-konten-box {
+                    width: 400px;
+                    height: 400px;
+                }
+
+                .box-konten-text {
+                    margin-top: 60px;
+                }
+
+                .box-text {
+                    margin: 0px;
+                    padding: 0px;
+                    margin-top: 100px;
+                    margin-left: 20px;
+                }
+            </style>
+        </section>
+        <!-- BOX KONTEN 1 -->
+
+        <!-- BOX KONTEN 2 -->
+        <section class="box-konten2">
+            <div class="box-konten-div">
+                <h2 class="box-text-konten2-h2">Here are the results of my work</h2>
+            </div>
+            <style>
+                .box-konten-div {
+                    background-color: #001C30;
+                    width: 600px;
+                    height: 60px;
+                    border-radius: 30px;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                }
+
+                .box-konten2 {
+                    height: 100px;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    padding: 50px;
+                    padding-bottom: 100px;
+                    color: #ffff;
+                    text-decoration: none;
+                    text-decoration-line: none;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+
+                .box-text-konten2-h2 {
+                    margin: 0px;
+                    justify-content: center;
+                    text-align: center;
+                    margin-top: 14px;
+                }
+            </style>
+        </section>
+        <!-- BOX KONTEN 2 -->
+
+
+        <!-- KONTEN 1 -->
+        <section class="card content">
+            <img src="image/DESIGN 1.jpg" alt="" class="responsive-image">
+            <img src="image/DESIGN 3.png" alt="" class="responsive-image">
+            <img src="image/DESIGN 2.png" alt="" class="responsive-image">
+            <img src="image/DESIGN 4.jpg" alt="" class="responsive-image">
+            <img src="image/DESIGN 5.jpg" alt="" class="responsive-image">
+            <img src="image/DESIGN 6.jpg" alt="" class="responsive-image">
+        </section>
+        <style>
+            .responsive-image {
+                display: inline-block;
+                margin: 10px;
+            }
+        </style>
+        <!-- KONTENT 1 -->
+
+    </main>
+
+    <section class="animated-section">
+        <h2>Bagian 1</h2>
+        <p>Ini adalah deskripsi dari bagian 1.</p>
+    </section>
+
+    <section class="animated-section">
+        <h2>Bagian 2</h2>
+        <p>Ini adalah deskripsi dari bagian 2.</p>
+    </section>
+
+    <section class="animated-section">
+        <h2>Bagian 3</h2>
+        <p>Ini adalah deskripsi dari bagian 3.</p>
+    </section>
+    <style>
+        .animated-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .animated-section.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Styling tambahan untuk tampilan */
+        .animated-section {
+            height: 500px;
+            background-color: #001C30;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+    <script>
+        function isElementInViewport(element) {
+            var rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+            );
+        }
+
+        function animateElements() {
+            var elements = document.querySelectorAll('.animated-section');
+
+            for (var i = 0; i < elements.length; i++) {
+                var element = elements[i];
+                if (isElementInViewport(element)) {
+                    element.classList.add('animated');
+                } else {
+                    element.classList.remove('animated');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', animateElements);
+        window.addEventListener('load', animateElements);
+    </script>
+
+    <!-- PENUTUP -->
+    <footer>
+        &copy: 2023 dot.tulsign
+    </footer>
+    <!-- PENUTUP -->
+
+</body>
+
+</html>
